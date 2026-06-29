@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface SidebarProps {
   role: "student" | "faculty" | "admin";
@@ -9,7 +10,11 @@ interface SidebarProps {
 
 export default function Sidebar({ role }: SidebarProps) {
   const pathname = usePathname();
+  const router = useRouter();
 
+  const handleLogout = () => {
+    router.push("/login");
+  };
   const menus = {
     student: [
       {
@@ -42,6 +47,11 @@ export default function Sidebar({ role }: SidebarProps) {
         href: "/dashboard/student/profile",
         icon: "bi-person",
       },
+      {
+        name: "Logout",
+        href: "/login",
+        icon: "bi-box-arrow-right",
+      },
     ],
 
     faculty: [
@@ -69,6 +79,11 @@ export default function Sidebar({ role }: SidebarProps) {
         name: "Profile",
         href: "/dashboard/faculty/profile",
         icon: "bi-person",
+      },
+      {
+        name: "Logout",
+        href: "/logout",
+        icon: "bi-box-arrow-right",
       },
     ],
 
