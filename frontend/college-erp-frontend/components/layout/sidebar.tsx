@@ -23,6 +23,11 @@ export default function Sidebar({ role }: SidebarProps) {
         icon: "bi-speedometer2",
       },
       {
+        name: "Profile",
+        href: "/dashboard/student/profile",
+        icon: "bi-person",
+      },
+      {
         name: "Attendance",
         href: "/dashboard/student/attendance",
         icon: "bi-calendar-check",
@@ -42,11 +47,7 @@ export default function Sidebar({ role }: SidebarProps) {
         href: "/dashboard/student/timetable",
         icon: "bi-calendar3",
       },
-      {
-        name: "Profile",
-        href: "/dashboard/student/profile",
-        icon: "bi-person",
-      },
+
       {
         name: "Logout",
         href: "/login",
@@ -61,28 +62,33 @@ export default function Sidebar({ role }: SidebarProps) {
         icon: "bi-speedometer2",
       },
       {
-        name: "Students",
-        href: "/dashboard/faculty/students",
-        icon: "bi-people",
-      },
-      {
-        name: "Attendance",
-        href: "/dashboard/faculty/attendance",
-        icon: "bi-calendar-check",
-      },
-      {
-        name: "Grades",
-        href: "/dashboard/faculty/grades",
-        icon: "bi-journal-check",
-      },
-      {
         name: "Profile",
         href: "/dashboard/faculty/profile",
         icon: "bi-person",
       },
       {
+        name: "Mark Attendance",
+        href: "/dashboard/faculty/attendance",
+        icon: "bi-calendar-check",
+      },
+      {
+        name: "Upload Results",
+        href: "/dashboard/faculty/results",
+        icon: "bi-journal-check",
+      },
+      {
+        name: "Timetable",
+        href: "/dashboard/faculty/timetable",
+        icon: "bi-calendar3",
+      },
+      {
+        name: "Manage Assigned Courses",
+        href: "/dashboard/faculty/assigned-courses",
+        icon: "bi-book",
+      },
+      {
         name: "Logout",
-        href: "/logout",
+        href: "/login",
         icon: "bi-box-arrow-right",
       },
     ],

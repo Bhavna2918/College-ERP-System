@@ -106,6 +106,71 @@ export default function TimetablePage() {
           </table>
         </div>
       </div>
+      {/* Faculty & Room Allocation */}
+
+      <div className="bg-white rounded-3xl shadow-lg overflow-hidden mt-8">
+        <div className="px-6 py-5 border-b">
+          <h2 className="text-xl font-bold text-slate-800">
+            Faculty & Room Allocation
+          </h2>
+        </div>
+
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead className="bg-slate-100">
+              <tr>
+                <th className="px-6 py-4 text-left">Course Code</th>
+                <th className="px-6 py-4 text-left">Subject</th>
+                <th className="px-6 py-4 text-left">Faculty</th>
+                <th className="px-6 py-4 text-center">Room No.</th>
+                <th className="px-6 py-4 text-center">Type</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr className="border-b hover:bg-slate-50">
+                <td className="px-6 py-4 font-medium">CS501</td>
+                <td className="px-6 py-4">Operating Systems</td>
+                <td className="px-6 py-4">Dr. Rahul Sharma</td>
+                <td className="px-6 py-4 text-center">A-205</td>
+                <td className="px-6 py-4 text-center">Theory</td>
+              </tr>
+
+              <tr className="border-b hover:bg-slate-50">
+                <td className="px-6 py-4 font-medium">CS502</td>
+                <td className="px-6 py-4">Database Management Systems</td>
+                <td className="px-6 py-4">Prof. Neha Patil</td>
+                <td className="px-6 py-4 text-center">B-104</td>
+                <td className="px-6 py-4 text-center">Theory</td>
+              </tr>
+
+              <tr className="border-b hover:bg-slate-50">
+                <td className="px-6 py-4 font-medium">CS503</td>
+                <td className="px-6 py-4">Computer Networks</td>
+                <td className="px-6 py-4">Dr. Amit Kulkarni</td>
+                <td className="px-6 py-4 text-center">A-301</td>
+                <td className="px-6 py-4 text-center">Theory</td>
+              </tr>
+
+              <tr className="border-b hover:bg-slate-50">
+                <td className="px-6 py-4 font-medium">CS504</td>
+                <td className="px-6 py-4">Software Engineering</td>
+                <td className="px-6 py-4">Prof. Sneha Joshi</td>
+                <td className="px-6 py-4 text-center">C-102</td>
+                <td className="px-6 py-4 text-center">Theory</td>
+              </tr>
+
+              <tr className="border-b hover:bg-slate-50">
+                <td className="px-6 py-4 font-medium">CS505</td>
+                <td className="px-6 py-4">Web Development</td>
+                <td className="px-6 py-4">Prof. Kiran Deshpande</td>
+                <td className="px-6 py-4 text-center">Lab-3</td>
+                <td className="px-6 py-4 text-center">Lab</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </DashboardLayout>
   );
 }

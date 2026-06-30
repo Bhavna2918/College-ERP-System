@@ -12,72 +12,114 @@ export default function ResultsPage() {
       {
         code: "CS101",
         subject: "Programming Fundamentals",
-        marks: 84,
+        totalmarks: 84,
         grade: "A",
       },
       {
         code: "MA101",
         subject: "Engineering Mathematics I",
-        marks: 88,
+        totalmarks: 88,
         grade: "A",
       },
-      { code: "PH101", subject: "Engineering Physics", marks: 82, grade: "A" },
+      {
+        code: "PH101",
+        subject: "Engineering Physics",
+        totalmarks: 82,
+        grade: "A",
+      },
     ],
 
     "Semester II": [
-      { code: "CS201", subject: "Data Structures", marks: 86, grade: "A" },
-      { code: "MA201", subject: "Discrete Mathematics", marks: 80, grade: "A" },
-      { code: "EE201", subject: "Digital Electronics", marks: 85, grade: "A" },
+      { code: "CS201", subject: "Data Structures", totalmarks: 86, grade: "A" },
+      {
+        code: "MA201",
+        subject: "Discrete Mathematics",
+        totalmarks: 80,
+        grade: "A",
+      },
+      {
+        code: "EE201",
+        subject: "Digital Electronics",
+        totalmarks: 85,
+        grade: "A",
+      },
     ],
 
     "Semester III": [
       {
         code: "CS301",
         subject: "Object Oriented Programming",
-        marks: 89,
+        totalmarks: 89,
         grade: "A+",
       },
       {
         code: "CS302",
         subject: "Computer Organization",
-        marks: 84,
+        totalmarks: 84,
         grade: "A",
       },
       {
         code: "CS303",
         subject: "Operating Systems Basics",
-        marks: 87,
+        totalmarks: 87,
         grade: "A",
       },
     ],
 
     "Semester IV": [
-      { code: "CS401", subject: "Database Concepts", marks: 90, grade: "A+" },
+      {
+        code: "CS401",
+        subject: "Database Concepts",
+        totalmarks: 90,
+        grade: "A+",
+      },
       {
         code: "CS402",
         subject: "Theory of Computation",
-        marks: 85,
+        totalmarks: 85,
         grade: "A",
       },
       {
         code: "CS403",
         subject: "Design & Analysis of Algorithms",
-        marks: 88,
+        totalmarks: 88,
         grade: "A",
       },
     ],
 
     "Semester V": [
-      { code: "CS501", subject: "Operating Systems", marks: 88, grade: "A" },
+      {
+        code: "CS501",
+        subject: "Operating Systems",
+        internalmarks: 40,
+        externalmarks: 48,
+        totalmarks: 88,
+        grade: "A",
+      },
       {
         code: "CS502",
         subject: "Database Management Systems",
-        marks: 91,
+        totalmarks: 91,
         grade: "A+",
       },
-      { code: "CS503", subject: "Computer Networks", marks: 84, grade: "A" },
-      { code: "CS504", subject: "Software Engineering", marks: 86, grade: "A" },
-      { code: "CS505", subject: "Web Development", marks: 95, grade: "A+" },
+      {
+        code: "CS503",
+        subject: "Computer Networks",
+        totalmarks: 84,
+        grade: "A",
+      },
+      {
+        code: "CS504",
+        subject: "Software Engineering",
+        totalmarks: 86,
+        grade: "A",
+      },
+      {
+        code: "CS505",
+        subject: "Web Development",
+        totalmarks: 95,
+        grade: "A+",
+      },
     ],
 
     "Semester VI": [],
@@ -136,7 +178,9 @@ export default function ResultsPage() {
               <tr>
                 <th className="px-6 py-4 text-left">Course Code</th>
                 <th className="px-6 py-4 text-left">Subject</th>
-                <th className="px-6 py-4 text-center">Marks</th>
+                <th className="px-6 py-4 text-center"> Internal Marks</th>
+                <th className="px-6 py-4 text-center">External Marks</th>
+                <th className="px-6 py-4 text-center">Total Marks</th>
                 <th className="px-6 py-4 text-center">Grade</th>
               </tr>
             </thead>
@@ -149,7 +193,17 @@ export default function ResultsPage() {
 
                     <td className="px-6 py-4">{subject.subject}</td>
 
-                    <td className="px-6 py-4 text-center">{subject.marks}</td>
+                    <td className="px-6 py-4 text-center">
+                      {subject.internalmarks}
+                    </td>
+
+                    <td className="px-6 py-4 text-center">
+                      {subject.externalmarks}
+                    </td>
+
+                    <td className="px-6 py-4 text-center">
+                      {subject.totalmarks}
+                    </td>
 
                     <td className="px-6 py-4 text-center">
                       <span className="font-semibold text-green-600">
