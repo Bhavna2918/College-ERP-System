@@ -95,10 +95,32 @@ export default function Sidebar({ role }: SidebarProps) {
 
     admin: [
       { name: "Dashboard", href: "/dashboard/admin", icon: "bi-speedometer2" },
-      { name: "Users", href: "#", icon: "bi-people-fill" },
-      { name: "Departments", href: "#", icon: "bi-building" },
-      { name: "Reports", href: "#", icon: "bi-file-earmark-text" },
-      { name: "Settings", href: "#", icon: "bi-gear" },
+      {
+        name: "Manage Students",
+        href: "/dashboard/admin/students",
+        icon: "bi-people-fill",
+      },
+      {
+        name: "Manage Faculty",
+        href: "/dashboard/admin/faculty",
+        icon: "bi-people",
+      },
+      {
+        name: "Manage Timetable",
+        href: "/dashboard/admin/timetable",
+        icon: "bi-calendar3",
+      },
+      {
+        name: "Course Allocation",
+        href: "/dashboard/admin/course-allocation",
+        icon: "bi-file-earmark-text",
+      },
+      {
+        name: "Reports",
+        href: "/dashboard/admin/reports",
+        icon: "bi-file-earmark-text",
+      },
+      { name: "Logout", href: "/login", icon: "bi-box-arrow-right" },
     ],
   };
 
