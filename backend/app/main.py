@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes import auth, students
+from app.routes import auth, students, faculty, department
 
 app = FastAPI(
     title="College ERP System",
@@ -20,6 +20,8 @@ app.add_middleware(
 
 app.include_router(auth.router, prefix="/api/v1")
 app.include_router(students.router, prefix="/api/v1")
+app.include_router(faculty.router, prefix="/api/v1")
+app.include_router(department.router, prefix="/api/v1")
 
 # Coming soon:
 # app.include_router(faculty.router, prefix="/api/v1")
